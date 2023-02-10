@@ -41,7 +41,7 @@ class InputForm extends Component {
                     <Input 
                         type="date" 
                         name="published_date" 
-                        value = {moment(data.published_date).format("YYYY-MM-DD")} 
+                        value = {data.published_date ? moment(data.published_date).format("YYYY-MM-DD") : ""} 
                         onChange={(e) => handleChange(e, "published_date")} 
                         required/>
                 </FormGroup>
